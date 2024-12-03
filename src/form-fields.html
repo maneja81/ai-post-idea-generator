@@ -1,0 +1,130 @@
+<div class="wrap">
+  <h1 class="wp-heading-inline">Form Example</h1>
+  <form method="post" action="options.php" class="form-wrap">
+    <!-- Text Input -->
+    <table class="form-table" role="presentation">
+      <tbody>
+        <tr>
+            <th scope="row">
+                <label for="text_input">Text Input</label>
+            </th>
+            <td>
+                <input name="text_input" type="text" id="text_input" value="" class="regular-text" />
+                <p class="description">Enter some text here.</p>
+            </td>
+        </tr>
+
+        <!-- Password Input -->
+        <tr>
+            <th scope="row">
+                <label for="password_input">Password Input</label>
+            </th>
+            <td>
+                <input name="password_input" type="password" id="password_input" value="" class="regular-text" />
+            </td>
+        </tr>
+      </tbody>
+
+      <!-- Email Input -->
+      <tr>
+        <th scope="row">
+          <label for="email_input">Email Input</label>
+        </th>
+        <td>
+          <input name="email_input" type="email" id="email_input" value="" class="regular-text ltr" />
+        </td>
+      </tr>
+
+      <!-- URL Input -->
+      <tr>
+        <th scope="row">
+          <label for="url_input">URL Input</label>
+        </th>
+        <td>
+          <input name="url_input" type="url" id="url_input" value="" class="regular-text code" />
+        </td>
+      </tr>
+
+      <!-- Number Input -->
+      <tr>
+        <th scope="row">
+          <label for="number_input">Number Input</label>
+        </th>
+        <td>
+          <input name="number_input" type="number" id="number_input" value="" class="small-text" />
+        </td>
+      </tr>
+
+      <!-- Textarea -->
+      <tr>
+        <th scope="row">
+          <label for="textarea">Textarea</label>
+        </th>
+        <td>
+          <textarea name="textarea" id="textarea" rows="5" class="large-text"></textarea>
+        </td>
+      </tr>
+
+      <!-- Dropdown -->
+      <tr>
+        <th scope="row">
+          <label for="dropdown">Dropdown</label>
+        </th>
+        <td>
+          <select name="dropdown" id="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Radio Buttons -->
+      <tr>
+        <th scope="row">Radio Buttons</th>
+        <td>
+          <fieldset>
+            <label> <input type="radio" name="radio" value="option1" /> Option 1 </label><br />
+            <label> <input type="radio" name="radio" value="option2" /> Option 2 </label>
+          </fieldset>
+        </td>
+      </tr>
+
+      <!-- Checkboxes -->
+      <tr>
+        <th scope="row">Checkboxes</th>
+        <td>
+          <fieldset>
+            <label> <input type="checkbox" name="checkbox1" value="1" /> Checkbox 1 </label><br />
+            <label> <input type="checkbox" name="checkbox2" value="1" /> Checkbox 2 </label>
+          </fieldset>
+        </td>
+      </tr>
+
+      <!-- Color Picker -->
+      <tr>
+        <th scope="row">
+          <label for="color_picker">Color Picker</label>
+        </th>
+        <td>
+          <input name="color_picker" type="color" id="color_picker" value="#000000" />
+        </td>
+      </tr>
+
+      <!-- File Upload -->
+      <tr>
+        <th scope="row">
+          <label for="file_upload">File Upload</label>
+        </th>
+        <td>
+          <input name="file_upload" type="file" id="file_upload" />
+        </td>
+      </tr>
+    </table>
+
+    <!-- Submit Button -->
+    <p class="submit">
+      <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes" />
+    </p>
+  </form>
+</div>

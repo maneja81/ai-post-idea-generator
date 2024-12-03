@@ -1,0 +1,1 @@
+<input name="<?php echo esc_attr($id) ?>" id="<?php echo esc_attr($id) ?>" type="<?php echo esc_attr($type) ?>" value="<?php echo $value ?>" class="regular-text" <?php echo $required; ?> <?php echo $attributes; ?> />
