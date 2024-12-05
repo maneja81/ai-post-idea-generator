@@ -3,10 +3,7 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-$api_key = $this->getSetting('open_api_key', false);
-if($api_key) {
-    $api_key = $this->decryptString($api_key);
-}
+$api_key = $this->getSetting('openai_api_key', '');
 ?>
 <form method="post" class="form-wrap mawp-settings-form">
 <div class="form-errors notice notice-error">
@@ -17,7 +14,7 @@ if($api_key) {
 <tbody>
 <?php
 $description = wp_kses(sprintf('Enter your OpenAI API key to enable the AI Post Idea Generator.<br><a href="%s" target="_blank" rel="noopener noreferrer"><u>Click here</u></a> to obtain your OpenAI API key.', esc_url('https://platform.openai.com/api-keys')), ['br' => [], 'a' => ['href' => [], 'target' => [], 'rel' => []], 'u' => []]);
-echo $this->formField(['type' => 'password', 'name' => 'open_api_key', 'value' => $api_key, 'label' => 'OpenAI API Key', 'description' => $description, 'required' => true]);
+echo $this->formField(['type' => 'password', 'name' => 'openai_api_key', 'value' => $api_key, 'label' => 'OpenAI API Key', 'description' => $description, 'required' => true]);
 ?>
 </tbody>
 </table>

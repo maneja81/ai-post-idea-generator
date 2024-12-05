@@ -28,27 +28,6 @@ if (!class_exists('ai_post_idea_generator_openai_service')) {
         public $helpers;
 
         /**
-         * Singleton instance of the class.
-         *
-         * @var self
-         */
-        private static $instance;
-
-        /**
-         * Retrieves the singleton instance of the class.
-         *
-         * @return self The singleton instance of the class.
-         */
-        public static function getInstance()
-        {
-            if (!isset(self::$instance)) {
-                self::$instance = new self();
-            }
-
-            return self::$instance;
-        }
-
-        /**
          * AI_Post_Idea_Generator_OpenAI_Service constructor.
          *
          * Initializes the OpenAI service client using the API key from the settings.
@@ -59,10 +38,8 @@ if (!class_exists('ai_post_idea_generator_openai_service')) {
         public function __construct()
         {
             $this->helpers = ai_post_idea_generator_helpers::getInstance();
-            $api_key = $this->helpers->getSetting('open_api_key', false);
-            if ($api_key) {
-                $api_key = $this->helpers->decryptString($api_key);
-            }
+            $api_key = $this->helpers->getSetting('openai_api_key', '');
+            error_log('service: '.$api_key);
             $this->client = OpenAI::client($api_key);
         }
 
@@ -235,7 +212,7 @@ if (!class_exists('ai_post_idea_generator_openai_service')) {
                         $messages = $messages->toArray();
                         foreach ($messages['data'] as $message) {
                             if ($message['role'] == 'assistant') {
-                                $this->helpers->updateSetting('openai_result', $message);
+                                $this->helpers->updateSetting('openai_post_ideas', $message);
                                 return [
                                     'success' => true,
                                     'data' => $message,
