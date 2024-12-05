@@ -12,7 +12,8 @@
     "prod": "npm run production",
     "production": "mix --production",
     "pot": "wp i18n make-pot . languages/ai-post-idea-generator.pot --domain=ai-post-idea-generator --package-name=ai-post-idea-generator --ignore-domain",
-    "phpcs": "vendor/bin/phpcs --standard=WordPress . --ignore=node_modules,vendor"
+    "phpcs": "vendor/bin/phpcs --standard=WordPress . --ignore=node_modules,vendor,src,assets",
+    "phpcbf": "vendor/bin/phpcbf --standard=WordPress . --ignore=node_modules,vendor,src,assets"
   },
   "author": "Mohit Aneja <catchme@mohitaneja.com>",
   "license": "ISC",

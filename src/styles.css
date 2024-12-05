@@ -7,7 +7,7 @@ x-cloak {
     cursor: pointer;
     text-decoration: none;
   }
-  .form-success, 
+  .form-success,
   .form-errors {
     display: none;
   }
@@ -27,8 +27,7 @@ x-cloak {
     }
   }
 
-  .column-actions{
+  .column-actions {
     text-align: right;
   }
-
 }

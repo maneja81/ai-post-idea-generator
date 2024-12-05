@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
       },
     });
   });
-  
+
   $(".mawp-generate-ideas").on("submit", function (e) {
     e.preventDefault();
     $(".form-success").hide();
@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
       },
     });
   });
-  
+
   $(".mawp-create-drafts").on("submit", function (e) {
     e.preventDefault();
     $(".form-success").hide();
