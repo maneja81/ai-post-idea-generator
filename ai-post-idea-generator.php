@@ -19,8 +19,6 @@ if (!defined('ABSPATH')) {
 
 ob_start();
 
-// delete_option('_ai_post_idea_generator_settings');
-
 /**
  * The current version of the AI Post Idea Generator plugin.
  */
