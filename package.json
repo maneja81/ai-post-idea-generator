@@ -10,7 +10,8 @@
     "watch-poll": "mix watch -- --watch-options-poll=1000",
     "hot": "mix watch --hot",
     "prod": "npm run production",
-    "production": "mix --production"
+    "production": "mix --production",
+    "pot": "wp i18n make-pot . languages/ai-post-idea-generator.pot --domain=ai-post-idea-generator --package-name=ai-post-idea-generator --ignore-domain"
   },
   "author": "Mohit Aneja <catchme@mohitaneja.com>",
   "license": "ISC",
