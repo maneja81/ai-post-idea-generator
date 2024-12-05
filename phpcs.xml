@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="Custom WordPress Standards">
+    <description>Custom WordPress coding standards for my project.</description>
+
+    <!-- Use WordPress Standards -->
+    <rule ref="WordPress" />
+
+    <!-- Exclude Specific Rules -->
+    <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.SpacingAfterOpenBrace" />
+    <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
+
+    <!-- Ignore Large or Irrelevant Files -->
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+</ruleset>
